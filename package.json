@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "Soares Chen",
+    "email": "soares.chen@gmail.com",
+    "url": "http://soareschen.com"
+  },
+  "name": "quiver-copy",
+  "desription": "Copy simple objects that do not have non-trivial prototype",
+  "version": "0.0.1",
+  "homepage": "https://github.com/quiverjs/copy",
+  "repository": {
+    "url": "git@github.com:quiverjs/copy.git"
+  },
+  "devDependencies": {
+    "mocha": ">=1.8.1",
+    "should": ">=1.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/quiverjs/copy/issues",
+    "email": "quiverjs@soareschen.com"
+  },
+  "licenses": {
+    "type": "MIT",
+    "url": "https://raw.github.com/quiverjs/license/master/LICENSE"
+  },
+  "main": "./lib/copy",
+  "scripts": {
+    "test": "make test"
+  }
+}

@@ -1,4 +1,6 @@
 
+'use strict'
+
 var copyObject = require('../lib/copy.js').copyObject
 var should = require('should')
 

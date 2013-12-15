@@ -33,4 +33,8 @@ describe('no copy test', function() {
 
     should.equal(obj.foo, 'bar')
   })
+
+  it('no copy null should make no error', function() {
+    copyLib.noCopy(null)
+  })
 })

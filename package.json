@@ -6,7 +6,7 @@
   },
   "name": "quiver-copy",
   "desription": "Copy simple objects that do not have non-trivial prototype",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/quiverjs/copy",
   "repository": {
     "url": "git@github.com:quiverjs/copy.git"

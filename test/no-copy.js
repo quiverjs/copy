@@ -34,6 +34,16 @@ describe('no copy test', function() {
     should.equal(obj.foo, 'bar')
   })
 
+  it('force copy should copy', function() {
+    var obj = { foo: 'foo' }
+    copyLib.noCopy(obj)
+
+    var copy = copyLib.copyObject(obj, true)
+    copy.foo = 'bar'
+
+    should.equal(obj.foo, 'foo')
+  })
+
   it('no copy null should make no error', function() {
     copyLib.noCopy(null)
   })

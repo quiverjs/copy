@@ -14,19 +14,21 @@ describe('no copy test', function() {
     should.equal(obj.foo, 'foo')
   })
 
-  it('should not copy', function() {
+  it('enumerable should copy', function() {
     var obj = { foo: 'foo' }
-    obj._noCopy = true
+    obj.__noCopy = true
 
     var copy = copyLib.copyObject(obj)
     copy.foo = 'bar'
 
-    should.equal(obj.foo, 'bar')
+    should.notEqual(obj.foo, 'bar')
   })
 
-  it('non-enumerable no copy', function() {
+  it('non-enumerable should not copy', function() {
     var obj = { foo: 'foo' }
     copyLib.noCopy(obj)
+
+    should.equal(obj.__noCopy, true)
 
     var copy = copyLib.copyObject(obj)
     copy.foo = 'bar'
@@ -38,7 +40,7 @@ describe('no copy test', function() {
     var obj = { foo: 'foo' }
     copyLib.noCopy(obj)
 
-    var copy = copyLib.copyObject(obj, true)
+    var copy = copyLib.copyObject(obj, { forceCopy: true })
     copy.foo = 'bar'
 
     should.equal(obj.foo, 'foo')
